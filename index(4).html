@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14251d">
+  <meta name="description" content="إعدادية العسكريين المهنية الأهلية - التعليم المهني والتخصصات والتسجيل والنشاطات الطلابية في سامراء.">
+  <title>إعدادية العسكريين المهنية الأهلية | سامراء</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+    :root{
+      --green:#14251d; --green2:#1d382b; --green3:#294b38;
+      --gold:#d7b56d; --gold2:#f0d99f; --cream:#f7f5ef;
+      --ink:#20251f; --muted:#687168; --white:#fff;
+      --shadow:0 18px 50px rgba(17,35,25,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Cairo",Tahoma,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.8}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea{font:inherit}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{background:#0d1913;color:#d7d9d2;font-size:12px}
+    .topbar .container{display:flex;justify-content:space-between;gap:16px;padding:8px 0;flex-wrap:wrap}
+    .topbar a{color:var(--gold2)}
+    header{position:sticky;top:0;z-index:20;background:rgba(20,37,29,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(215,181,109,.2)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:white}
+    .brand{display:flex;align-items:center;gap:13px;min-width:0}
+    .crest{width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:25px;background:linear-gradient(145deg,#254633,#0e1d15);box-shadow:inset 0 0 0 4px rgba(215,181,109,.1)}
+    .brand strong{display:block;font-size:15px;line-height:1.5}
+    .brand small{display:block;color:#c9c5b8;font-size:11px}
+    .links{display:flex;align-items:center;gap:25px;font-size:13px;color:#e5e8e1}
+    .links a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:9px;padding:12px 20px;font-weight:800;cursor:pointer;transition:.2s}
+    .btn-gold{background:var(--gold);color:#18251c}
+    .btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+    .btn-outline{border:1px solid rgba(240,217,159,.65);color:var(--gold2);background:transparent}
+    .menu-btn{display:none;background:none;border:1px solid #657568;color:white;border-radius:8px;padding:7px 12px;font-size:20px}
+    .hero{position:relative;overflow:hidden;color:white;background:linear-gradient(110deg,rgba(12,28,19,.97),rgba(24,54,38,.88)),radial-gradient(circle at 15% 30%,#587347,transparent 35%);padding:90px 0 84px}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(215,181,109,.18);border-radius:50%;width:470px;height:470px;left:-170px;top:-250px}
+    .hero:after{width:600px;height:600px;left:-235px;top:-310px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:55px;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold2);font-size:13px;font-weight:800;letter-spacing:.2px}
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
+    h1{font-size:clamp(34px,5vw,57px);line-height:1.35;margin:18px 0 15px;font-weight:900}
+    h1 span{color:var(--gold2)}
+    .hero p{color:#d4ddd4;max-width:650px;margin:0 0 27px;font-size:16px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-card{border:1px solid rgba(240,217,159,.4);border-radius:22px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.035));box-shadow:0 25px 60px rgba(0,0,0,.18);text-align:center}
+    .seal{width:142px;height:142px;margin:0 auto 18px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;background:radial-gradient(circle,#31583d,#12251a 70%);box-shadow:0 0 0 8px rgba(215,181,109,.08),inset 0 0 0 5px rgba(215,181,109,.12);font-size:54px;color:var(--gold2)}
+    .hero-card h3{margin:0;color:var(--gold2);font-size:19px}
+    .hero-card p{font-size:13px;margin:8px auto 0}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px;max-width:620px}
+    .stat{border-right:2px solid var(--gold);padding:4px 13px}
+    .stat strong{display:block;color:var(--gold2);font-size:20px}
+    .stat span{font-size:12px;color:#d1d9d0}
+    section{padding:78px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 38px}
+    .section-head .eyebrow{color:#8b6b2e}
+    .section-head h2{font-size:clamp(26px,3.4vw,38px);color:var(--green);margin:10px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .about-panel{background:var(--green);color:white;border-radius:18px;padding:34px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .about-panel:after{content:"✦";position:absolute;left:18px;bottom:-40px;font-size:150px;color:rgba(215,181,109,.08)}
+    .about-panel h3{color:var(--gold2);font-size:24px;margin:0 0 12px}
+    .about-panel p{color:#d4ddd4;margin:0}
+    .check-list{display:grid;gap:14px;margin-top:22px}
+    .check{display:flex;gap:11px;align-items:flex-start}
+    .check i{font-style:normal;color:var(--gold);font-weight:900}
+    .check span{font-size:14px}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:white;border:1px solid #e9e5d9;border-radius:15px;padding:25px;box-shadow:0 8px 24px rgba(20,37,29,.04);transition:.2s}
+    .feature:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .feature-icon{width:48px;height:48px;border-radius:12px;background:#eef1e9;color:var(--green2);display:grid;place-items:center;font-size:23px;margin-bottom:15px}
+    .feature h3{color:var(--green);font-size:18px;margin:0 0 7px}
+    .feature p{color:var(--muted);font-size:13px;margin:0}
+    .dark-section{background:var(--green);color:white}
+    .dark-section .section-head h2{color:white}
+    .dark-section .section-head p{color:#c6d0c6}
+    .dark-section .section-head .eyebrow{color:var(--gold2)}
+    .specialties{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .specialty{padding:22px 17px;border:1px solid rgba(215,181,109,.28);border-radius:13px;background:rgba(255,255,255,.045);text-align:center}
+    .specialty b{display:block;color:var(--gold2);font-size:16px;margin-bottom:5px}
+    .specialty span{font-size:12px;color:#d1d9d0}
+    .notice{background:#f0eadb;border:1px solid #e5d8b9;border-radius:15px;padding:23px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .notice h3{margin:0 0 5px;color:var(--green);font-size:19px}
+    .notice p{margin:0;color:#6b6b5d;font-size:13px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .gallery-item{min-height:185px;border-radius:14px;background:linear-gradient(135deg,#294b38,#14251d);color:var(--gold2);display:grid;place-items:center;text-align:center;padding:20px;border:1px solid rgba(215,181,109,.3)}
+    .gallery-item span{font-size:36px;display:block}
+    .gallery-item small{color:#e2e5dc}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}
+    .contact-info,.contact-form{background:white;border:1px solid #e9e5d9;border-radius:16px;padding:28px}
+    .contact-info{background:var(--green);color:white}
+    .contact-info h3{color:var(--gold2);margin-top:0}
+    .contact-line{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px}
+    .contact-line:last-child{border:0}
+    .contact-line b{display:block;color:var(--gold2);font-size:12px}
+    .contact-form h3{color:var(--green);margin:0 0 15px}
+    label{display:block;font-size:13px;font-weight:700;margin:12px 0 5px}
+    input,textarea{width:100%;border:1px solid #deded5;border-radius:8px;padding:12px;background:#fcfcf9;outline:none}
+    input:focus,textarea:focus{border-color:#9a824d;box-shadow:0 0 0 3px rgba(215,181,109,.16)}
+    textarea{min-height:105px;resize:vertical}
+    footer{background:#0d1913;color:#c4cec4;padding:25px 0;font-size:12px}
+    footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .gold{color:var(--gold2)}
+    .prototype{background:#fff6df;color:#654d1e;text-align:center;font-size:11px;padding:7px 12px}
+    @media(max-width:850px){
+      .links{display:none;position:absolute;top:82px;right:0;left:0;background:#14251d;padding:18px 25px 24px;flex-direction:column;align-items:stretch;gap:12px;border-top:1px solid #435345}
+      .links.open{display:flex}.menu-btn{display:block}.nav>.btn{display:none}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding:65px 0}.hero-card{max-width:430px;margin:auto;width:100%}
+      .feature-grid{grid-template-columns:repeat(2,1fr)}
+      .specialties{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:560px){
+      .container{width:min(100% - 28px,1160px)}
+      .brand strong{font-size:12px}.brand small{font-size:10px}.crest{width:44px;height:44px}
+      .hero{padding:52px 0}.hero p{font-size:14px}.stats{gap:4px}.stat strong{font-size:17px}
+      section{padding:58px 0}.feature-grid,.gallery-grid{grid-template-columns:1fr 1fr}
+      .feature{padding:18px}.feature h3{font-size:15px}
+      .notice{align-items:flex-start;flex-direction:column}
+      .gallery-item{min-height:145px}.gallery-item span{font-size:29px}
+    }
+  </style>
+</head>
+<body>
+  <div class="prototype">نموذج تجريبي أولي للعرض — تُراجع الإدارة المعلومات ووسائل التواصل قبل النشر الرسمي</div>
+  <div class="topbar"><div class="container"><span>📍 سامراء – حي المعمل – شارع الخدمي</span><span>للاستفسار: <a href="tel:07756663777">07756663777</a></span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="الصفحة الرئيسية">
+        <div class="crest">✦</div><div><strong>إعدادية العسكريين المهنية الأهلية</strong><small>تعليم مهني • مهارات • مستقبل</small></div>
+      </a>
+      <nav class="links" id="navLinks">
+        <a href="#home">الرئيسية</a><a href="#about">عن المدرسة</a><a href="#specialties">التخصصات</a><a href="#admission">التسجيل</a><a href="#activities">النشاطات</a><a href="#contact">اتصل بنا</a>
+      </nav>
+      <a class="btn btn-gold" href="#admission">استفسر عن التسجيل</a>
+      <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">بوابتكم نحو التعليم المهني</div>
+          <h1>نتعلّم اليوم،<br><span>لنصنع مهارات الغد</span></h1>
+          <p>في إعدادية العسكريين المهنية الأهلية نؤمن بأن التعليم المهني طريق لصناعة الخبرة، وتنمية القدرات، وفتح آفاق جديدة أمام الطلبة.</p>
+          <div class="hero-actions"><a class="btn btn-gold" href="#specialties">اكتشف التخصصات ←</a><a class="btn btn-outline" href="#contact">تواصل مع المدرسة</a></div>
+          <div class="stats">
+            <div class="stat"><strong>تعليم مهني</strong><span>تركيز على المهارات</span></div>
+            <div class="stat"><strong>تطبيق عملي</strong><span>تعلم بالممارسة</span></div>
+            <div class="stat"><strong>سامراء</strong><span>حي المعمل</span></div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="seal">✥</div>
+          <h3>إعدادية العسكريين المهنية الأهلية</h3>
+          <p>بيئة تعليمية تهتم بالمعرفة والمهارة والاستعداد للمستقبل</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow">من نحن</div>
+          <h2 style="color:var(--green);font-size:32px;margin:10px 0">التعليم المهني… معرفة تتحول إلى مهارة</h2>
+          <p style="color:var(--muted)">إعدادية تعليمية مهنية تهدف إلى إعداد الطلبة وتأهيلهم بالمهارات العلمية والتعليمية، ضمن مسار يساعدهم على اكتشاف قدراتهم وبناء مستقبلهم.</p>
+          <div class="check-list">
+            <div class="check"><i>◆</i><span>الاهتمام بالجانب العلمي والتطبيقي.</span></div>
+            <div class="check"><i>◆</i><span>تنمية مهارات الطلبة والاستعداد للحياة العملية.</span></div>
+            <div class="check"><i>◆</i><span>متابعة الأنشطة والفعاليات التعليمية.</span></div>
+          </div>
+        </div>
+        <div class="about-panel"><h3>رسالتنا التعليمية</h3><p>توفير تجربة تعليمية مهنية تشجع على التعلم المستمر، وتربط المعرفة بالواقع العملي، وتدعم طموح الطلبة نحو فرص مستقبلية أفضل.</p></div>
+      </div>
+    </section>
+
+    <section style="background:#eeece4">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">لماذا تختار مدرستنا؟</div><h2>خطوات ثابتة نحو مستقبل مهني</h2><p>نموذج تعريفي بالخدمات والقيم التي يمكن للمدرسة إبرازها عبر موقعها الرسمي.</p></div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature-icon">🎓</div><h3>تعليم مهني</h3><p>مسار تعليمي يركز على المعرفة والمهارات المهنية.</p></article>
+          <article class="feature"><div class="feature-icon">🧰</div><h3>مهارات تطبيقية</h3><p>إبراز الجوانب العملية والأنشطة التدريبية للطلبة.</p></article>
+          <article class="feature"><div class="feature-icon">👨‍🏫</div><h3>كادر تعليمي</h3><p>التعريف بالهيئة التعليمية والجهود المبذولة لدعم الطلبة.</p></article>
+          <article class="feature"><div class="feature-icon">📢</div><h3>إعلانات مستمرة</h3><p>مكان واضح لنشر أخبار المدرسة ومواعيد التسجيل.</p></article>
+          <article class="feature"><div class="feature-icon">🤝</div><h3>تواصل مباشر</h3><p>تسهيل وصول الطلبة وأولياء الأمور إلى معلومات التواصل.</p></article>
+          <article class="feature"><div class="feature-icon">🏅</div><h3>عرض الإنجازات</h3><p>توثيق الفعاليات والمشاركات والنجاحات الطلابية.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="specialties">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">المسارات المهنية</div><h2>التخصصات والأقسام</h2><p>يمكن تحديث هذه القائمة وفق الأقسام المعتمدة والمتاحة فعلياً في المدرسة.</p></div>
+        <div class="specialties">
+          <div class="specialty"><b>الأمن السيبراني</b><span>يُحدّث حسب الأقسام المعتمدة</span></div>
+          <div class="specialty"><b>الحاسوب</b><span>يُحدّث حسب الأقسام المعتمدة</span></div>
+          <div class="specialty"><b>الكهرباء</b><span>يُحدّث حسب الأقسام المعتمدة</span></div>
+          <div class="specialty"><b>التخصصات المهنية</b><span>تُضاف التفاصيل الرسمية هنا</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="admission">
+      <div class="container">
+        <div class="notice">
+          <div><h3>هل ترغب بالتسجيل أو معرفة شروط القبول؟</h3><p>تواصل مع إدارة المدرسة للحصول على أحدث تفاصيل التسجيل والمستمسكات المطلوبة والمواعيد.</p></div>
+          <a class="btn btn-gold" href="https://wa.me/9647756663777?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84" target="_blank" rel="noopener">استفسر الآن عبر واتساب</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" style="background:#eeece4">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">من أجواء المدرسة</div><h2>النشاطات والفعاليات</h2><p>مساحة مخصصة لصور الدروس والورش والفعاليات والإعلانات. تُستبدل المربعات بصور المدرسة الأصلية عند اعتماد الموقع.</p></div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><div><span>📚</span><b>الأنشطة التعليمية</b><br><small>صور الدروس والفعاليات</small></div></div>
+          <div class="gallery-item"><div><span>🧑‍💻</span><b>التدريب العملي</b><br><small>ورش ومهارات تطبيقية</small></div></div>
+          <div class="gallery-item"><div><span>🏫</span><b>مبنى المدرسة</b><br><small>مرافق وبيئة تعليمية</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">نحن هنا لمساعدتك</div><h2>تواصل معنا</h2><p>للاستفسار عن المدرسة أو التسجيل، يمكنكم التواصل عبر المعلومات التالية.</p></div>
+        <div class="contact-grid">
+          <div class="contact-info"><h3>معلومات المدرسة</h3>
+            <div class="contact-line"><b>العنوان</b>سامراء – حي المعمل – شارع الخدمي</div>
+            <div class="contact-line"><b>رقم الهاتف</b><a href="tel:07756663777">07756663777</a></div>
+            <div class="contact-line"><b>فيسبوك</b>إعدادية العسكريين المهنية الأهلية</div>
+            <div class="contact-line"><b>إنستغرام</b><a href="https://www.instagram.com/ask.voc/" target="_blank" rel="noopener">@ask.voc</a></div>
+          </div>
+          <form class="contact-form" id="contactForm"><h3>أرسل استفسارك</h3>
+            <label for="name">الاسم</label><input id="name" name="name" placeholder="اكتب اسمك" required>
+            <label for="phone">رقم الهاتف (اختياري)</label><input id="phone" name="phone" inputmode="tel" placeholder="07xxxxxxxxx">
+            <label for="message">نص الاستفسار</label><textarea id="message" name="message" placeholder="اكتب استفسارك هنا..." required></textarea>
+            <button class="btn btn-gold" style="width:100%;margin-top:15px" type="submit">إرسال عبر واتساب ←</button>
+            <small style="display:block;color:#777;margin-top:9px">سيتم فتح واتساب لإرسال الرسالة، ولا تُخزّن البيانات في هذا النموذج.</small>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><span>© <span id="year"></span> إعدادية العسكريين المهنية الأهلية</span><span>تصميم واجهة تعريفية تجريبية <span class="gold">بهوية مهنية</span></span></div></footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const text = `السلام عليكم، أنا ${name}${phone ? '، رقم هاتفي: '+phone : ''}. ${message}`;
+      window.open('https://wa.me/9647756663777?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
